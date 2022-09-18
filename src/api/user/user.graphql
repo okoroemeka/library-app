@@ -1,0 +1,37 @@
+type User {
+    userid: ID!
+    email: String!
+    password:String
+    name : String!
+    address: String!
+}
+type UserReturnType {
+    userid: ID!
+    email: String!
+    name : String!
+    address: String!
+}
+
+input userInput {
+    userId: String!
+}
+input loginUser {
+    password:String!
+    email:String!
+}
+input createUserInput {
+    email: String!
+    password: String!
+    address:String
+    department:String!
+    fullname:String
+}
+
+type Query {
+    getUser(input: userInput):UserReturnType
+}
+
+type Mutation {
+    createUser(input:createUserInput):UserReturnType
+    loginUser(input:loginUser):UserReturnType
+}

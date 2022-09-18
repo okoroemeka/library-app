@@ -1,0 +1,47 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev src/index.ts",
+    "start:prod": "node build/index.js",
+    "build": "tsc",
+    "migrate": "psql -U postgres -f src/db/index.sql",
+    "prisma-db-migrate": "npx prisma migrate dev --name init"
+  },
+  "keywords": [],
+  "author": "Emeka Okoro",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.10",
+    "apollo-server": "^3.7.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dataloader": "^2.1.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.4",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.31",
+    "@types/node-fetch": "^2.6.1",
+    "@types/pg": "^8.6.5",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "prettier": "^2.6.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  }
+}
